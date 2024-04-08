@@ -7,7 +7,7 @@ from tflite_model_maker.image_classifier import DataLoader
 from tflite_model_maker.config import ExportFormat
 
 def main(argv):
-    
+
     dir = None
     batch_size = 8
     epochs = 50
@@ -25,10 +25,10 @@ def main(argv):
                 batch_size = int(arg)
             elif opt in ("-e", "--epochs"):
                 epochs = int(arg)
-        
+
         if (dir is None):
             raise Exception()
-    
+
     except Exception:
         print("Specify a directory that contains your dataset.")
         print("create-model.py -d <directory of dataset>")
@@ -42,9 +42,10 @@ def main(argv):
     validation_data, test_data = rest_data.split(0.5)
 
     # select object recognition model architecture
-    spec = model_spec.get("mobilenet_v2")
+    spec = model_spec.get("efficientnet_lite0")
 
-    # customize the TensorFlow model
+
+    # customize the TensorFlow modela
     model = image_classifier.create(
         train_data,
         model_spec=spec,
@@ -70,8 +71,8 @@ def main(argv):
 
     stop = round(time.time() * 1000)
     print("process image: {} ms".format(stop - start))
-   
-   
+
+
 if __name__ == "__main__":
    main(sys.argv[1:])
 
