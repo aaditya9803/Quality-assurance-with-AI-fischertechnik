@@ -1,0 +1,26 @@
+<annotation>
+	<folder>v3-part1-jpeg</folder>
+	<filename>cam320x240-MIPO2-1665133373596.jpeg</filename>
+	<path>cam320x240-MIPO2-1665133373596.jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>320</width>
+		<height>240</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>MIPO2</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>64</xmin>
+			<ymin>7</ymin>
+			<xmax>239</xmax>
+			<ymax>183</ymax>
+		</bndbox>
+	</object>
+</annotation>

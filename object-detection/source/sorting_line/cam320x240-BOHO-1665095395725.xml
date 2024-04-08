@@ -1,0 +1,26 @@
+<annotation>
+	<folder>test</folder>
+	<filename>cam320x240-BOHO-1665095395725.jpeg</filename>
+	<path>cam320x240-BOHO-1665095395725.jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>320</width>
+		<height>240</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>BOHO</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>65</xmin>
+			<ymin>20</ymin>
+			<xmax>239</xmax>
+			<ymax>193</ymax>
+		</bndbox>
+	</object>
+</annotation>

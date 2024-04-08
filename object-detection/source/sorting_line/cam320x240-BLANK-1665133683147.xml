@@ -1,0 +1,26 @@
+<annotation>
+	<folder>v3-part1-jpeg</folder>
+	<filename>cam320x240-BLANK-1665133683147.jpeg</filename>
+	<path>cam320x240-BLANK-1665133683147.jpeg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>320</width>
+		<height>240</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>BLANK</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>107</xmin>
+			<ymin>5</ymin>
+			<xmax>284</xmax>
+			<ymax>169</ymax>
+		</bndbox>
+	</object>
+</annotation>
