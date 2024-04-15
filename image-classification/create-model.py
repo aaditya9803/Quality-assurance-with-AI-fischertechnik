@@ -42,7 +42,7 @@ def main(argv):
     validation_data, test_data = rest_data.split(0.5)
 
     # select object recognition model architecture
-    spec = model_spec.get("efficientnet_lite0")
+    spec = model_spec.get("mobilenet_v2")
 
 
     # customize the TensorFlow modela
