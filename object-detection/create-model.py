@@ -11,8 +11,8 @@ def main(argv):
     
     dir = None
     batch_size = 8
-    epochs = 50
-
+    epochs = 150
+    print (batch_size," ",epochs," BATCH SIZE AND EPOCHS")
     try:
 
         opts, _ = getopt.getopt(argv, "hd:b:e:", ["help","directory=","batchSize=","epochs="])
@@ -62,8 +62,8 @@ def main(argv):
 
     # export to Tensorflow Lite model and label file in `export_dir`
     path = pathlib.PurePath(dir)
-    model.export(export_dir="build/" + path.name + "/")
-    model.export(export_dir="build/" + path.name + "/", export_format=ExportFormat.LABEL)
+    model.export(export_dir="build/" + "/" + str(batch_size) + "_" + str(epochs) + "_" + str(spec.config.tflite_max_detections) + "/" + path.name + "/")
+    model.export(export_dir="build/" + "/" + str(batch_size) + "_" + str(epochs) + "/" + path.name + "/", export_format=ExportFormat.LABEL)
 
     # evaluate the tensorflow lite model
     print(model.evaluate_tflite("build/" + path.name + "/model.tflite", test_data))
