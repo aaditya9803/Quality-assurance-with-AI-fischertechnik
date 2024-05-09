@@ -38,20 +38,30 @@ def process_image(interpreter, image, input_index):
 
     # Get outputs
     output_details = interpreter.get_output_details()
+    for output_detail in output_details:
+        print("\n")
+        print(output_detail)
     # output_details[0] - position
     # output_details[1] - class id
     # output_details[2] - score
     # output_details[3] - count
     
-    positions = np.squeeze(interpreter.get_tensor(output_details[0]["index"]))
-    classes = np.squeeze(interpreter.get_tensor(output_details[1]["index"]))
-    scores = np.squeeze(interpreter.get_tensor(output_details[2]["index"]))
+    classes = np.squeeze(interpreter.get_tensor(output_details[-1]["index"]))
+    scores = np.squeeze(interpreter.get_tensor(output_details[0]["index"]))
+    positions = np.squeeze(interpreter.get_tensor(output_details[1]["index"]))
+    #scores = np.squeeze(interpreter.get_tensor(output_details[2]["index"]))
 
     result = []
 
+    #yprint(positions.shape, classes.shape, scores.shape, test.shape)
+    #print(positions[0], classes[0], test[0])
+    # for i in range(len(positions)):
+    #     result.append({"pos": positions[i], "_id": classes[i] })
+    # print(scores.shape, positions.shape, classes.shape)
+    print(scores)
     for idx, score in enumerate(scores):
-        if score > 0.5:
-            result.append({"pos": positions[idx], "_id": classes[idx] })
+       if score >= 0.2:
+           result.append({"pos": positions[idx], "_id": classes[idx] })
 
     return result
 
