@@ -1,0 +1,46 @@
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ keras_layer (KerasLayer)    multiple                  3234464
+
+ class_net/class-predict (Se  multiple                 5256
+ parableConv2D)
+
+ box_net/box-predict (Separa  multiple                 2916
+ bleConv2D)
+
+=================================================================
+Total params: 3,242,636
+Trainable params: 3,195,500
+Non-trainable params: 47,136
+_________________________________________________________________
+2024-05-03 04:07:58.955005: W tensorflow/core/framework/dataset.cc:768] Input of GeneratorDatasetOp::Dataset will not be optimized because the dataset does not implement the AsGraphDefInternal() method needed to apply optimizations.
+13/13 [==============================] - 95s 6s/step
+
+{'AP': 0.5703766, 'AP50': 0.6338004, 'AP75': 0.6284605, 'APs': -1.0, 'APm': -1.0, 'APl': 0.5714452, 'ARmax1': 0.8889783, 'ARmax10': 0.91903037, 'ARmax100': 0.
+91943944, 'ARs': -1.0, 'ARm': -1.0, 'ARl': 0.91943944, 'AP_/BLANK': 0.6581657, 'AP_/BOHO': 0.5877436, 'AP_/BOHOEL': 0.65032303, 'AP_/BOHOMIPO1': 0.42834252, 'AP_/BOHOMIPO2': 0.667214, 'AP_/CRACK': 0.6963048, 'AP_/MIPO1': 0.32505557, 'AP_/MIPO2': 0.54986364}
+WARNING:tensorflow:Skipping full serialization of Keras layer <tensorflow_examples.lite.model_maker.core.task.model_spec.object_detector_spec.ExportModel object at 0x000001F02D099190>, because it is not built.
+WARNING:tensorflow:Skipping full serialization of Keras layer <tensorflow_examples.lite.model_maker.core.task.model_spec.object_detector_spec.ExportModel object at 0x000001F02D099190>, because it is not built.
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, restored_function_body, restored_function_body, restored_function_body while saving (showing 5 of 610). These functions will not be directly callable after loading.
+2024-05-03 04:10:20.215588: W tensorflow/core/common_runtime/graph_constructor.cc:805] Node 'resample_p7/PartitionedCall' has 1 outputs but the _output_shapes attribute specifies shapes for 3 outputs. Output shapes may be inaccurate.
+2024-05-03 04:10:31.580315: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:362] Ignored output_format.
+2024-05-03 04:10:31.580489: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:365] Ignored drop_control_dependency.
+2024-05-03 04:10:31.592309: I tensorflow/cc/saved_model/reader.cc:43] Reading SavedModel from: C:\Users\aadit\AppData\Local\Temp\tmp0u2d4lua
+2024-05-03 04:10:31.806420: I tensorflow/cc/saved_model/reader.cc:81] Reading meta graph with tags { serve }
+2024-05-03 04:10:31.807094: I tensorflow/cc/saved_model/reader.cc:122] Reading SavedModel debug info (if present) from: C:\Users\aadit\AppData\Local\Temp\tmp0u2d4lua
+2024-05-03 04:10:32.346255: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:354] MLIR V1 optimization pass is not enabled
+2024-05-03 04:10:32.444205: I tensorflow/cc/saved_model/loader.cc:228] Restoring SavedModel bundle.
+2024-05-03 04:10:34.775807: I tensorflow/cc/saved_model/loader.cc:212] Running initialization op on SavedModel bundle at path: C:\Users\aadit\AppData\Local\Temp\tmp0u2d4lua
+2024-05-03 04:10:35.841920: I tensorflow/cc/saved_model/loader.cc:301] SavedModel load for tags { serve }; Status: success: OK. Took 4249933 microseconds.
+2024-05-03 04:10:37.620084: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:263] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2024-05-03 04:10:39.721074: I tensorflow/compiler/mlir/lite/flatbuffer_export.cc:1972] Estimated count of arithmetic ops: 1.774 G  ops, equivalently 0.887 G  MACs
+
+Estimated count of arithmetic ops: 1.774 G  ops, equivalently 0.887 G  MACs
+fully_quantize: 0, inference_type: 6, input_inference_type: 3, output_inference_type: 0
+MACs
+
+Estimated count of arithmetic ops: 1.774 G  ops, equivalently 0.887 G  MACs
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+790/790 [==============================] - 6907s 9s/step
+
+{'AP': 0.12506023, 'AP50': 0.14706647, 'AP75': 0.14430259, 'APs': -1.0, 'APm': -1.0, 'APl': 0.12507758, 'ARmax1': 0.22622599, 'ARmax10': 0.22776672, 'ARmax100': 0.22776672, 'ARs': -1.0, 'ARm': -1.0, 'ARl': 0.22776672, 'AP_/BLANK': 0.010920645, 'AP_/BOHO': 5.0515255e-06, 'AP_/BOHOEL': 0.56747895, 'AP_/BOHOMIPO1': 0.030943314, 'AP_/BOHOMIPO2': 0.051479444, 'AP_/CRACK': 0.3394985, 'AP_/MIPO1': 0.0, 'AP_/MIPO2': 0.00015594476}

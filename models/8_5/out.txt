@@ -1,0 +1,52 @@
+Model: ""
+_________________________________________________________________
+ Layer (type)                Output Shape              Param #
+=================================================================
+ keras_layer (KerasLayer)    multiple                  3234464
+
+ class_net/class-predict (Se  multiple                 5256
+ parableConv2D)
+
+ box_net/box-predict (Separa  multiple                 2916
+ bleConv2D)
+
+=================================================================
+Total params: 3,242,636
+Trainable params: 3,195,500
+Non-trainable params: 47,136
+_________________________________________________________________
+2024-04-23 18:42:27.232288: W tensorflow/core/framework/dataset.cc:768] Input of GeneratorDatasetOp::Dataset will not be optimized because the dataset does not implement the AsGraphDefInternal() method needed to apply optimizations.
+2024-04-23 18:42:50.147750: W tensorflow/core/framework/cpu_allocator_impl.cc:82] Allocation of 629145600 exceeds 10% of free system memory.
+ 1/13 [=>............................] - ETA: 5:522024-04-23 18:42:56.684533: W tensorflow/core/framework/cpu_allocator_impl.cc:82] Allocation of 629145600 exceeds 10% of free system memory.
+ 2/13 [===>..........................] - ETA: 1:012024-04-23 18:43:02.269175: W tensorflow/core/framework/cpu_allocator_impl.cc:82] Allocation of 629145600 exceeds 10% of free system memory.
+ 3/13 [=====>........................] - ETA: 56s 2024-04-23 18:43:08.207071: W tensorflow/core/framework/cpu_allocator_impl.cc:82] Allocation of 629145600 exceeds 10% of free system memory.
+ 4/13 [========>.....................] - ETA: 53s2024-04-23 18:43:14.574468: W tensorflow/core/framework/cpu_allocator_impl.cc:82] Allocation of 629145600 exceeds 10% of free system memory.
+13/13 [==============================] - 105s 6s/step
+
+{'AP': 0.19141924, 'AP50': 0.2444724, 'AP75': 0.22121778, 'APs': -1.0, 'APm': -1.0, 'APl': 0.19428498, 'ARmax1': 0.7061011, 'ARmax10': 0.7618892, 'ARmax100': 0.7623684, 'ARs': -1.0, 'ARm': -1.0, 'ARl': 0.7623684, 'AP_/BLANK': 0.05847895, 'AP_/BOHO': 0.2608594, 'AP_/BOHOEL': 0.42006722, 'AP_/BOHOMIPO1': 0.12023719, 'AP_/BOHOMIPO2': 0.20419456, 'AP_/CRACK': 0.2509356, 'AP_/MIPO1': 0.067007065, 'AP_/MIPO2': 0.149574}
+WARNING:tensorflow:Skipping full serialization of Keras layer <tensorflow_examples.lite.model_maker.core.task.model_spec.object_detector_spec.ExportModel object at 0x000001EFEA86ED30>, because it is not built.
+WARNING:tensorflow:Skipping full serialization of Keras layer <tensorflow_examples.lite.model_maker.core.task.model_spec.object_detector_spec.ExportModel object at 0x000001EFEA86ED30>, because it is not built.
+WARNING:absl:Found untraced functions such as _jit_compiled_convolution_op, _jit_compiled_convolution_op, restored_function_body, restored_function_body, restored_function_body while saving (showing 5 of 610). These functions will not be directly callable after loading.
+2024-04-23 18:45:00.299069: W tensorflow/core/common_runtime/graph_constructor.cc:805] Node 'resample_p7/PartitionedCall' has 1 outputs but the _output_shapes attribute specifies shapes for 3 outputs. Output shapes may be inaccurate.
+2024-04-23 18:45:10.640920: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:362] Ignored output_format.
+2024-04-23 18:45:10.641086: W tensorflow/compiler/mlir/lite/python/tf_tfl_flatbuffer_helpers.cc:365] Ignored drop_control_dependency.
+2024-04-23 18:45:10.657248: I tensorflow/cc/saved_model/reader.cc:43] Reading SavedModel from: C:\Users\aadit\AppData\Local\Temp\tmpmzlv8bxo
+2024-04-23 18:45:10.836050: I tensorflow/cc/saved_model/reader.cc:81] Reading meta graph with tags { serve }
+2024-04-23 18:45:10.836751: I tensorflow/cc/saved_model/reader.cc:122] Reading SavedModel debug info (if present) from: C:\Users\aadit\AppData\Local\Temp\tmpmzlv8bxo
+2024-04-23 18:45:11.323624: I tensorflow/compiler/mlir/mlir_graph_optimization_pass.cc:354] MLIR V1 optimization pass is not enabled
+2024-04-23 18:45:11.425132: I tensorflow/cc/saved_model/loader.cc:228] Restoring SavedModel bundle.
+2024-04-23 18:45:14.345339: I tensorflow/cc/saved_model/loader.cc:212] Running initialization op on SavedModel bundle at path: C:\Users\aadit\AppData\Local\Temp\tmpmzlv8bxo
+2024-04-23 18:45:15.419844: I tensorflow/cc/saved_model/loader.cc:301] SavedModel load for tags { serve }; Status: success: OK. Took 4763783 microseconds.
+2024-04-23 18:45:17.178328: I tensorflow/compiler/mlir/tensorflow/utils/dump_mlir_util.cc:263] disabling MLIR crash reproducer, set env var `MLIR_CRASH_REPRODUCER_DIRECTORY` to enable.
+2024-04-23 18:45:19.220781: I tensorflow/compiler/mlir/lite/flatbuffer_export.cc:1972] Estimated count of arithmetic ops: 1.774 G  ops, equivalently 0.887 G  MACs
+
+Estimated count of arithmetic ops: 1.774 G  ops, equivalently 0.887 G  MACs
+fully_quantize: 0, inference_type: 6, input_inference_type: 3, output_inference_type: 0
+2024-04-23 18:49:38.821545: I tensorflow/compiler/mlir/lite/flatbuffer_export.cc:1972] Estimated count of arithmetic ops: 1.774 G  ops, equivalently 0.887 G  MACs
+
+Estimated count of arithmetic ops: 1.774 G  ops, equivalently 0.887 G  MACs
+INFO: Created TensorFlow Lite XNNPACK delegate for CPU.
+790/790 [==============================] - 52521s 67s/step
+
+{'AP': 0.09433003, 'AP50': 0.12141263, 'AP75': 0.1075355, 'APs': -1.0, 'APm': -1.0, 'APl': 0.09490175, 'ARmax1': 0.22979134, 'ARmax10': 0.23850888, 'ARmax100': 0.23857233, 'ARs': -1.0, 'ARm': -1.0, 'ARl': 0.23857233, 'AP_/BLANK': 0.00022489253, 'AP_/BOHO': 0.1207334, 'AP_/BOHOEL': 0.26317877, 'AP_/BOHOMIPO1': 0.027236069, 'AP_/BOHOMIPO2': 0.05867113, 'AP_/CRACK': 0.16586326, 'AP_/MIPO1': 0.00013176668, 'AP_/MIPO2': 0.11860091}
+process image: 56965934 ms
